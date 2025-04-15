@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Pencil Sketch Transformer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sketch Studio 🎨</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Pencil Sketch Generator</h1>
-  <input type="file" id="imageInput" accept="image/*" />
-  <button onclick="uploadAndTransform()">Upload & Transform</button>
-  <div id="result"></div>
+  <div class="container">
+    <h1>✏️ Sketch Studio</h1>
+
+    <div class="upload-box">
+      <label for="upload" class="custom-upload">📁 Choose an Image</label>
+      <input type="file" id="upload" accept="image/*" />
+      <button id="submit">🧠 Generate Sketch</button>
+    </div>
+
+    <div class="preview-container">
+      <div class="preview">
+        <h2>Original Image</h2>
+        <img id="original" src="" alt="Original Preview" />
+      </div>
+      <div class="preview">
+        <h2>Sketched Image</h2>
+        <img id="sketch" src="" alt="Sketch Preview" />
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
